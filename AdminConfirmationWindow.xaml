@@ -1,0 +1,75 @@
+﻿<Window x:Class="Nova.AdminConfirmationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Nova"
+        mc:Ignorable="d"
+        Title="AdminConfirmationWindow"
+        Height="400" 
+        Width="300"
+        ResizeMode="NoResize">
+
+
+    <Border Width="300"
+            Height="400"
+            Background="#141332"
+            CornerRadius="2">
+
+        <StackPanel Orientation="Vertical"
+            Margin="20">
+
+
+            <Label Content="Username" 
+               Grid.Row="0"
+               Margin="-5,5"
+               HorizontalAlignment="Left"
+               Foreground="#fafafe"
+               FontWeight="Bold"/>
+
+            <TextBox x:Name="Username"
+                     Grid.Row="1"
+                     Margin="0,5"
+                     Width="270"
+                     HorizontalAlignment="Center"
+                     Text="{Binding Username}"
+                     Style="{StaticResource ClickableTextboxStyle}">
+
+            </TextBox>
+
+            <Label Content="Password" 
+                   Grid.Row="2"
+                   Margin="-5,5"
+                   HorizontalAlignment="Left"
+                   Foreground="#fafafe"
+                   FontWeight="Bold"/>
+
+            <TextBox x:Name="Password"
+                     Grid.Row="3"
+                     Margin="0,5"
+                     Width="270"
+                     HorizontalAlignment="Center"
+                     TextAlignment="Left"
+                     Text="{Binding Password}"
+                     Style="{StaticResource ClickablePWTextboxStyle}">
+
+            </TextBox>
+
+            <Button x:Name="Login"
+                    Style="{StaticResource LoginButtonStyle }"
+                    Content="Login"
+                    Click="Login_Click">
+            </Button>
+
+
+
+
+
+
+        </StackPanel>
+
+    </Border>
+
+</Window>
+
+
